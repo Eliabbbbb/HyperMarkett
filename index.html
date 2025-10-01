@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Bienvenidos - HyperMarket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap y estilos -->
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="./assets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font-awesome.min.css">
+  <link href="./assets/print.css" rel="stylesheet" type="text/css" media="print">
+
+  <style>
+    body { font-family: 'Varela Round', sans-serif; }
+    header { background:#222; color:white; padding:10px 0; }
+    header .logo { font-size:24px; font-weight:bold; }
+    nav ul { list-style:none; padding:0; margin:0; display:flex; }
+    nav li { margin-right:20px; }
+    nav a { color:white; text-decoration:none; }
+    footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; }
+
+    .raty-comp{padding:8px 0;font-size:10px;color:#FD9317}
+    .tw-blogbar{display:flex;align-items:center}
+    @media (max-width:767px){.tw-blogbar{flex-direction:column}}
+    .ta-left{text-align:left}.ta-center{text-align:center}.ta-justify{text-align:justify}.ta-right{text-align:right}
+    .float-l{float:left}.float-r{float:right}
+    .flexobj{flex-grow:0;flex-shrink:0;margin-right:1em;margin-left:1em}
+    .flexrow{display:flex !important;align-items:center}
+    .flexrow-align-start{align-items:start}
+    @media (max-width:767px){.flexrow{flex-direction:column}.flexrow-align-start{align-items:center}}
+    #main-carousel > .carousel-inner > .item{transform:scale(1.1);}
+    #main-carousel > .carousel-inner > .active{transform:scale(1);transition:0.6s ease-in-out left,transform 3s;}
+  </style>
+</head>
+<body>
+  <div id="site">
+    <div id="page">
+
+      <!-- HEADER -->
+      <header class="container-fluid">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">HyperMarket</div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="clientes.html">Clientes</a></li>
+              <li><a href="categorias.html">Categorías</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main id="content" class="container-fluid">
+        <div class="row-fluid">
+          <div class="span12">
+
+            <!-- Carrusel -->
+            <div id="main-carousel" class="carousel slide" data-ride="carousel" role="region" aria-label="Carrusel principal">
+              <!-- Indicadores -->
+              <ol class="carousel-indicators">
+                <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#main-carousel" data-slide-to="1"></li>
+                <li data-target="#main-carousel" data-slide-to="2"></li>
+                <li data-target="#main-carousel" data-slide-to="3"></li>
+              </ol>
+
+              <!-- Wrapper -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img class="img-responsive" src="./assets/producto-en-mercadotecnia.jpg" alt="Administra tus productos">
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="./assets/producto-en-mercadotecnia.jpg" alt="Administra tus productos">
+                  <div class="carousel-caption hidden-phone txt-center">
+                    <h4>Administra tus productos</h4>
+                    <p>Productos ordenados, ventas más rápidas</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="./assets/tipos-de-clientes-como-son-y-como-deberias-tratarlos1.jpg" alt="Administra tus clientes">
+                  <div class="carousel-caption hidden-phone txt-center">
+                    <h4>Administra tus clientes</h4>
+                    <p>Clientes ordenados, negocio más eficiente</p>
+                  </div>
+                </div>
+                <div class="item">
+                  <img class="img-responsive" src="./assets/categories-google-my-business-1.jpg" alt="Administra todas las categorías">
+                  <div class="carousel-caption hidden-phone txt-center">
+                    <h4>Administra todas las categorías</h4>
+                    <p>Categorías claras, gestión más simple</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Controles -->
+              <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+              </a>
+              <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Siguiente</span>
+              </a>
+            </div>
+            <!-- fin carrusel -->
+
+          </div>
+        </div>
+
+        <!-- SECCIÓN BIENVENIDA -->
+        <section class="container text-center" style="margin-top:40px;">
+          <h2>Bienvenido a HyperMarket</h2>
+          <p>Administra tus productos, clientes y categorías de manera eficiente y sencilla. 
+             Este sistema está diseñado para ayudarte a organizar tu negocio de forma práctica.</p>
+        </section>
+
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2025 HyperMarket. Todos los derechos reservados.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- scripts -->
+  <script src="./assets/jquery.min.js"></script>
+  <script src="./assets/bootstrap.min.js"></script>
+  <script>
+    (function($){
+      $(function(){
+        var $c = $('#main-carousel');
+        if ($c.find('.carousel-inner .item.active').length === 0) {
+          $c.find('.carousel-inner .item').first().addClass('active');
+          $c.find('.carousel-indicators li').first().addClass('active');
+        }
+        $c.carousel({
+          interval: 3000,
+          pause: 'hover'
+        });
+      });
+    })(jQuery);
+  </script>
+</body>
+</html>

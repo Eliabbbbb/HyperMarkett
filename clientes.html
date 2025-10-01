@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Gestionar Clientes - HyperMarket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="./assets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font-awesome.min.css">
+  <link href="./assets/print.css" rel="stylesheet" type="text/css" media="print">
+
+  <style>
+    body { font-family: 'Varela Round', sans-serif; }
+    header { background:#222; color:white; padding:10px 0; }
+    header .logo { font-size:24px; font-weight:bold; }
+    nav ul { list-style:none; padding:0; margin:0; display:flex; }
+    nav li { margin-right:20px; }
+    nav a { color:white; text-decoration:none; }
+    footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; }
+    h1,h2 { margin-top:20px; }
+  </style>
+</head>
+<body>
+  <div id="site">
+    <div id="page">
+
+      <!-- HEADER -->
+      <header class="container-fluid">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">HyperMarket</div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li class="active"><a href="clientes.html">Clientes</a></li>
+              <li><a href="categorias.html">Categorías</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main id="content" class="container">
+        <h1 class="text-center">Gestionar Clientes</h1>
+
+        <!-- Formulario de clientes -->
+        <section>
+          <h2>Ingrese los datos del cliente</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="idcliente" class="control-label">ID Cliente</label>
+              <input type="text" name="idcliente" id="idcliente" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="nombre" class="control-label">Nombre</label>
+              <input type="text" name="nombre" id="nombre" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="telefono" class="control-label">Teléfono</label>
+              <input type="text" name="telefono" id="telefono" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="direccion" class="control-label">Dirección</label>
+              <input type="text" name="direccion" id="direccion" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+          </form>
+        </section>
+
+        <!-- Tabla de clientes -->
+        <section style="margin-top:40px;">
+          <h2>Lista de Clientes</h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>ID Cliente</th>
+                <th>Nombre</th>
+                <th>Teléfono</th>
+                <th>Dirección</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>001</td><td>Juan Pérez</td><td>999-123456</td><td>Av. Lima 123</td></tr>
+              <tr><td>002</td><td>María López</td><td>988-654321</td><td>Jr. Cusco 456</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2025 HyperMarket. Todos los derechos reservados.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./assets/jquery.min.js"></script>
+  <script src="./assets/bootstrap.min.js"></script>
+</body>
+</html>

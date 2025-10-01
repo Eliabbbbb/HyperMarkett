@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Gestionar Categorías - HyperMarket</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS -->
+  <link href="./assets/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="./assets/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/font-awesome.min.css">
+  <link href="./assets/print.css" rel="stylesheet" type="text/css" media="print">
+
+  <style>
+    body { font-family: 'Varela Round', sans-serif; }
+    header { background:#222; color:white; padding:10px 0; }
+    header .logo { font-size:24px; font-weight:bold; }
+    nav ul { list-style:none; padding:0; margin:0; display:flex; }
+    nav li { margin-right:20px; }
+    nav a { color:white; text-decoration:none; }
+    footer { background:#222; color:#ccc; text-align:center; padding:20px; margin-top:40px; }
+    h1,h2 { margin-top:20px; }
+  </style>
+</head>
+<body>
+  <div id="site">
+    <div id="page">
+
+      <!-- HEADER -->
+      <header class="container-fluid">
+        <div class="container d-flex justify-content-between align-items-center">
+          <div class="logo">HyperMarket</div>
+          <nav>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="clientes.html">Clientes</a></li>
+              <li class="active"><a href="categorias.html">Categorías</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main id="content" class="container">
+        <h1 class="text-center">Gestionar Categorías</h1>
+
+        <!-- Formulario -->
+        <section>
+          <h2>Ingrese los datos de la categoría</h2>
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label for="idcategoria" class="control-label">ID Categoría</label>
+              <input type="text" name="idcategoria" id="idcategoria" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="nombre" class="control-label">Nombre</label>
+              <input type="text" name="nombre" id="nombre" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="descripcion" class="control-label">Descripción</label>
+              <input type="text" name="descripcion" id="descripcion" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Agregar</button>
+            <button type="reset" class="btn btn-secondary">Limpiar</button>
+          </form>
+        </section>
+
+        <!-- Tabla -->
+        <section style="margin-top:40px;">
+          <h2>Lista de Categorías</h2>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>ID Categoría</th>
+                <th>Nombre</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>CAT01</td><td>Lácteos</td><td>Productos derivados de la leche</td></tr>
+              <tr><td>CAT02</td><td>Bebidas</td><td>Gaseosas, jugos y refrescos</td></tr>
+              <tr><td>CAT03</td><td>Limpieza</td><td>Artículos de aseo y limpieza</td></tr>
+            </tbody>
+          </table>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer>
+        <p>&copy; 2025 HyperMarket. Todos los derechos reservados.</p>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script src="./assets/jquery.min.js"></script>
+  <script src="./assets/bootstrap.min.js"></script>
+</body>
+</html>
